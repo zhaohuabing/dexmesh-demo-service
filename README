@@ -1,0 +1,10 @@
+# Canary deployment testing
+
+This docker image can be used for Istio canary deployment testing.
+How: Use environment variable VERSION to specify the app version.
+
+example: 
+docker run -p 1313:1313  -e VERSION=1.2 dexmesh-demo-service
+curl http://127.0.0.1:1313/api/dexmeshdemo/v1/appversion
+{"version": "1.2"}
+
